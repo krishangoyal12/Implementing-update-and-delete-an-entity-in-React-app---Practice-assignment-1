@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const API_URI = 'http://localhost:8000/doors'; // Replace with the actual API URI if different
+const API_URI = 'http://localhost:8000/doors';
 
 const UpdateItem = ({ itemId }) => {
-    const [item, setItem] = useState(null); // State to store the fetched item
-    const [updatedItem, setUpdatedItem] = useState({}); // State to store user updates
-    const [message, setMessage] = useState(''); // State to store success/error messages
+    const [item, setItem] = useState(null);
+    const [updatedItem, setUpdatedItem] = useState({});
+    const [message, setMessage] = useState('');
 
     // Fetch the existing item when the component mounts
     useEffect(() => {
@@ -74,8 +74,8 @@ const UpdateItem = ({ itemId }) => {
                                     <input
                                         type="text"
                                         name={key}
-                                        value={updatedItem[key] || ''} // Display updated value or fallback to empty string
-                                        placeholder={item[key]} // Show the current value as a placeholder
+                                        value={updatedItem[key] || ''}
+                                        placeholder={item[key]}
                                         onChange={handleInputChange}
                                     />
                                 </label>
